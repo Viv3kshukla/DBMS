@@ -70,9 +70,10 @@
 						$result3=mysqli_query($conn,$sql3);
 
 						if($result3){
-						
+							$message="Success";
 						}
 						else{
+							$message="Failure";
 							echo "error ".mysqli_error($conn);
 						}
 				}
@@ -111,7 +112,7 @@
 	<body>
 		<div class="container">
 			<div class="page-header">
-				<h4> <?php echo "Success<br>"; ?></h4>
+				<h4> <?php echo $message; ?></h4>
 			</div>
 			<div class="jumbotron">
 				

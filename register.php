@@ -55,98 +55,102 @@
 	<div class="container">
 		<h1>Register</h1>
 		<form action="register_status.php" method="post">
-    		<div class="form-group">
-      			<label for="username">Username:</label>
-      			<input type="text" class="form-control" id="username" name="USERNAME" required/>
-    		</div>
-    		<div class="form-group">
-      			<label for="name">Name:</label>
-      			<input type="text" class="form-control" id="name"  name="CUST_NAME" required/>
-    		</div>
-    		<div class="form-group">
-      			<label for="dob">Date of Birth:</label>
-      			<input type="date" class="form-control" id="dob" name="DATE_OF_BIRTH" required/>
-    		</div>
-    		<div class="form-group">
-      			<label for="sex">Sex:</label>
-      			<select id="sex" name="SEX">
-    				<option value="Male">Male</option>
-    				<option value="Female">Female</option>
-  				</select>
-    		</div>
-    		<div class="form-group">
-      			<label for="email">Email:</label>
-      			<input type="email" class="form-control" id="email" name="EMAIL" required>
-    		</div>
-    		<div class="form-group">
-      			<label for="mobile">Mobile No:</label>
-      			<input type="number" class="form-control" id="mobile" name="MOBILE_NO" required>
-    		</div>
-    		<div class="form-group">
-      			<label for="branchid">Branch Id:</label>
-      			<input type="number" class="form-control" id="branchid" maxlength="8" name="BRANCH_ID" required>
-    		</div>
-    		<div class="form-group">
-      			<label for="street">Street/Room No :</label>
-      			<input type="text" class="form-control" id="street" name="STREET">
-    		</div>
-    		<div class="form-group">
-      			<label for="city">City:</label>
-      			<input type="text" class="form-control" id="city" name="CITY" required>
-    		</div>
-        <div class="form-group">
-            <label for="ac_type">Account Type:</label>
-            <select id="ac_type" name="ACCOUNT_TYPE">
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td><label for="username">Username:</label></td>
+            <td><input type="text" class="form-control" id="username" name="USERNAME" required/></td>
+          </tr>
+          <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" class="form-control" id="name"  name="CUST_NAME" required/></td>
+          </tr>
+          <tr>
+            <td><label for="dob">Date of Birth:</label></td>
+            <td><input type="date" class="form-control" id="dob" name="DATE_OF_BIRTH" required/></td>
+          </tr>
+          <tr>
+            <td><label for="sex">Sex:</label></td>
+            <td><select id="sex" name="SEX">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" class="form-control" id="email" name="EMAIL" required></td>
+          </tr>
+          <tr>
+            <td><label for="mobile">Mobile No:</label></td>
+            <td><input type="number" class="form-control" id="mobile" name="MOBILE_NO" required></td>
+          </tr>
+          <tr>
+            <td><label for="branchid">Branch Id:</label></td>
+            <td><input type="number" class="form-control" id="branchid" maxlength="8" name="BRANCH_ID" required></td>
+          </tr>
+          <tr>
+            <td><label for="street">Street/Room No :</label></td>
+            <td><input type="text" class="form-control" id="street" name="STREET"></td>
+          </tr>
+          <tr>
+            <td><label for="city">City:</label></td>
+            <td><input type="text" class="form-control" id="city" name="CITY" required></td>
+          </tr>
+          <tr>
+            <td> <label for="ac_type">Account Type:</label></td>
+            <td><select id="ac_type" name="ACCOUNT_TYPE">
               <option value="current">Current Account</option>
               <option value="savings">Savings Account</option>
-            </select>
-        </div>
-    		<div class="form-group">
-      			<label for="state">State:</label>
-      			<select id="state" name="STATE">
-    				<option value="Andhra Pradesh">Andhra Pradesh</option>
-    				<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-    				<option value="Assam">Assam</option>
-					<option value="Bihar">Bihar</option>
-					<option value="Chhattisgarh">Chhattisgarh</option>
-    				<option value="Goa">Goa</option>
-    				<option value="Gujarat">Gujarat</option>
-					<option value="Haryana">Haryana</option>
-					<option value="Himachal Pradesh">Himachal Pradesh</option>
-    				<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-    				<option value="Jharkhand">Jharkhand</option>
-					<option value="Karnataka">Karnataka</option>
-					<option value="Kerala">Kerala</option>
-    				<option value="Madhya Pradesh">Madhya Pradesh</option>
-    				<option value="Maharashtra">Maharashtra</option>
-					<option value="Manipur">Manipur</option>
-					<option value="Meghalaya">Meghalaya</option>
-    				<option value="Mizoram">Mizoram</option>
-    				<option value="Nagaland">Nagaland</option>
-					<option value="Odisha">Odisha</option>
-					<option value="Punjab">Punjab</option>
-    				<option value="Rajasthan">Rajasthan</option>
-    				<option value="Sikkim">Sikkim</option>
-					<option value="Tamil Nadu">Tamil Nadu</option>
-					<option value="Telangana">Telangana</option>
-					<option value="Tripura">Tripura</option>
-    				<option value="Uttar Pradesh">Uttar Pradesh</option>
-    				<option value="Uttarakhand">Uttarakhand</option>
-					<option value="West Bengal">West Bengal</option>
-  				</select>
-    		</div>
-    		<div class="form-group">
-      			<label for="pincode">Pincode:</label>
-      			<input type="number" class="form-control" id="pincode"  name="PINCODE" required>
-    		</div>
-  			<div class="form-group">
-      			<label for="password">Password:</label>
-      			<input type="password" class="form-control" id="password" name="PASSWORD" required>
-    		</div>
-    		<div class="form-group">
-      			<label for="password_again">Re-enter Password:</label>
-      			<input type="password" class="form-control" id="password_again" name="PASSWORD_AGAIN" required>
-    		</div>
+            </select></td>
+          </tr>
+          <tr>
+            <td><label for="state">State:</label></td>
+            <td><select id="state" name="STATE">
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+          <option value="West Bengal">West Bengal</option>
+          </select></td>
+          </tr>
+          <tr>
+            <td><label for="pincode">Pincode:</label></td>
+            <td><input type="number" class="form-control" id="pincode"  name="PINCODE" required></td>
+          </tr>
+          <tr>
+            <td><label for="password">Password:</label></td>
+            <td><input type="password" class="form-control" id="password" name="PASSWORD" required></td>
+          </tr>
+          <tr>
+            <td><label for="password_again">Re-enter Password:</label></td>
+            <td><input type="password" class="form-control" id="password_again" name="PASSWORD_AGAIN" required></td>
+          </tr>
+        </tbody>
+      </table>
     		<div class="checkbox">
     			<label><input type="checkbox" required> I accept the <a href="conditions.php" target="_blank">Terms and Conditions</a>
            		</label>
