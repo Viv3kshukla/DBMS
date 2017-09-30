@@ -19,9 +19,10 @@
 		 <link rel="stylesheet" href="nexus.css" rel="stylesheet">
 		<style>
 			.jumbotron{
-				background-color:#eee;
+				background-color:#99ccff;
 				color:black;
-				margin-right:400px;
+				margin-right:300px;
+
 			}
 			.navbar-inverse.navbar-brand{
 				color:red;
@@ -113,18 +114,32 @@
 
 
 
- <div class="col-md-9" style="margin-top: 3cm;padding-left:1cm;">
+ <div class="col-md-9" style="margin-top: 3cm;padding-left:2cm;">
 		
 			<div class="page-header">
 				<h4> <?php echo "Hello ".$_SESSION['username']."<br>"; ?></h4>
 			</div>
-			
-				<p>Internet banking website. </p>
-				<a href="home_loan.php"> Home loan </a><br>
-        <a href="car_loan.php"> Car loan </a><br>
-        <a href="personal_loan.php"> Personal loan </a><br>
-        <a href="education_loan.php"> Education loan </a><br>
-
+			<div class="jumbotron" >
+				<div style="text-align:center; color:blue; font-family:'Century';font-size:20px;"> Select loan type </div><br><br>
+				<table class="table">
+				    <thead >
+				      <tr >
+				        <th><a href="home_loan.php" style="color:black;"> Home loan </a></th>
+				      </tr>
+				      <tr>
+				        <th><a href="car_loan.php" style="color:black;"> Car loan </a></th>
+				      </tr>
+				      <tr>
+				        <th><a href="personal_loan.php" style="color:black;"> Personal loan </a></th>
+				      </tr>
+					  <tr>
+				        <th><a href="education_loan.php" style="color:black;"> Education loan </a></th>
+				      </tr>
+				    </thead>
+				</table>
+				<br>
+	        <br>
+        	</div>
 		
 		</div>
 		</div>

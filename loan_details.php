@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>India Finance</title>
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="nexus.css" rel="stylesheet">
 		<style>
 			.jumbotron{
 				background-color:#d8d2d2;
@@ -98,14 +98,12 @@
 			<div class="page-header">
 				<h4> <?php echo "Hello ".$_SESSION['username']."<br>"; ?></h4>
 			</div>
-			<div class="jumbotron">
-				<p>Internet banking website. </p>
-			</div>
-			<div class="jumbotron" style="background-color:teal;
+			<div class="jumbotron" style="background-color:#99ccff;;
 				color:black;
 				margin-right:300px;">
-					<table class="table table-striped">
-    						<thead>
+				<div style="text-align:center; color:blue; font-family:'Century';font-size:20px;"> Loan Details </div><br><br>
+					<table class="table table-striped table-bordered">
+    						<thead style="color:black">
     							<tr>
      								<th>Loan id</th>
       								<th>Loan date</th>

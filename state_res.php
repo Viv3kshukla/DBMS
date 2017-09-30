@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="nexus.css" rel="stylesheet">
 		<style>
 			.jumbotron{
-				background-color:#d8d2d2;
+				background-color:#99ccff;
 				color:black;
 				margin-right:300px;
 			}
@@ -104,14 +104,14 @@
 				<h4> <?php echo "Hello ".$_SESSION['username']."<br>"; ?></h4>
 			</div>
 			<div class="jumbotron">
-				<p>Internet banking website. </p>
+				<div style="text-align:center; color:blue; font-family:'Century';font-size:20px;"> Account Statement </div><br><br>
 				<?php 
 					$username1=$_SESSION['username'];
 					include 'connect.php';
 					$sql="SELECT account.ACCOUNT_NUMBER,account.ACCOUNT_TYPE,customer.CUST_NAME,account.BALANCE,account.START_DATE,branch.BRANCH_NAME FROM login,account,customer,branch WHERE login.USERNAME=customer.LOGIN_ID AND account.BRANCH_ID=branch.BRANCH_ID AND customer.CUST_ID=account.CUST_ID AND USERNAME='$username1'";
 					$result=mysqli_query($conn,$sql);
 					if($result){	$row=mysqli_fetch_assoc($result); ?>
-						<table class="table table-hover">
+						<table class="table table-hover table-bordered">
     						<thead>
     							<tr>
      								<th>Account no.</th>
@@ -140,8 +140,9 @@
 			<div class="jumbotron" style="background-color:#ffff66;
 				color:black;
 				margin-right:300px;">
-					<table class="table table-striped">
-    						<thead>
+				<div style="text-align:center; color:blue; font-family:'Century';font-size:20px;"> Transactions </div><br><br>
+					<table class="table table-striped table-bordered">
+    						<thead style="color:black">
     							<tr>
      								<th>Date</th>
       								<th>Narration</th>

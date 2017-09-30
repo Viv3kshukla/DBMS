@@ -20,7 +20,7 @@
 			.jumbotron{
 				background-color:#99ccff;
 				color:white;
-				margin-right:400px;
+				margin-right:200px;
 			}
 			.navbar-inverse.navbar-brand{
 				color:red;
@@ -133,11 +133,11 @@
 				$row3=mysqli_fetch_assoc($result3);
 			?>
 			<div class="jumbotron">
-				<p>Internet banking website. </p>
+				<div style="text-align:center; color:blue; font-family:'Century';font-size:20px;"> Basic Information </div><br><br>
 				<p>
 					
-					<table class="table table-hover">
-    						<thead>
+					<table class="table table-hover table-bordered">
+    						<thead style="color:black">
     							<tr>
       								<th>Customer name</th>
         							<th>Account no</th>
@@ -151,13 +151,13 @@
      							   <td><?php echo $row['CUST_NAME']; ?></td>
     							    <td><?php echo $row1['ACCOUNT_NUMBER']; ?></td>
     							    <td><?php echo $row3['BRANCH_NAME']; ?></td>
-    							    <td><?php echo $row3['CITY'];echo ",".$row3['STATE']; ?></td>
+    							    <td><?php echo $row3['CITY'];echo " , ".$row3['STATE']; ?></td>
         							<td><?php echo $row1['BALANCE']; ?></td>
       							</tr>
     						</tbody>
  						</table>
 				</p>
-				<a href="lastten.php" style="align:center;">Click here to get last 10 transaction</a>
+				<a href="lastten.php" style="font-size:20px;">Click here to get last 10 transaction</a>
 
 			</div>
 		</div>

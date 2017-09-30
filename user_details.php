@@ -18,7 +18,7 @@
 		 <link rel="stylesheet" href="nexus.css" rel="stylesheet">
 		<style>
 			.jumbotron{
-				background-color:#d8d2d2;
+				background-color:#99ccff;
 				color:black;
 				margin-right:200px;
 			}
@@ -127,7 +127,7 @@
 				<h4> <?php echo "Hello ".$_SESSION['username']."<br>"; ?></h4>
 			</div>
 			<div class="jumbotron">
-				<p>Internet banking website. </p>
+				<div style="text-align:center; color:blue; font-family:'Century';font-size:20px;"> User Details </div><br><br>
 				<?php 
 					$username1=$_SESSION['username'];
 					include 'connect.php';
@@ -136,8 +136,8 @@
 					if($result){
 						$row=mysqli_fetch_assoc($result);
 						?>
-						<table class="table table-hover">
-    						<thead>
+						<table class="table table-hover table-bordered">
+    						<thead style="color:black">
     							<tr>
       								<th>Customer name</th>
         							<th>date of birth</th>

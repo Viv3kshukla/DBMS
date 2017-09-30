@@ -15,12 +15,12 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>India Finance</title>
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-			<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+			<link rel="stylesheet" href="nexus.css" rel="stylesheet">
 		<style>
 			.jumbotron{
-				background-color:#eee;
+				background-color:#99ccff;
 				color:black;
-				margin-right:400px;
+				margin-right:300px;
 			}
 			.navbar-inverse.navbar-brand{
 				color:red;
@@ -110,15 +110,15 @@
 				<h4> <?php echo "Hello ".$_SESSION['username']."<br>"; ?></h4>
 			</div>
 			<div class="jumbotron">
-				<p>Internet banking website. </p>
+				<div style="text-align:center; color:blue; font-family:'Century';font-size:20px;"> Personal Loan </div><br><br>
 				<form action="loan_reqst.php" method="post">
     		<div class="form-group">
       			<label for="email">Email:</label>
-      			<input type="email" class="form-control" id="email" placeholder="Enter email" name="EMAIL" required>
+      			<input type="email" class="form-control" id="email" placeholder="Enter Email" name="EMAIL" required>
     		</div>
     		<div class="form-group">
       			<label for="mobile">Mobile No:</label>
-      			<input type="number" class="form-control" id="mobile" placeholder="Enter email" name="MOBILE_NO" required>
+      			<input type="number" class="form-control" id="mobile" placeholder="Enter Mobile No" name="MOBILE_NO" required>
     		</div>
     		<div class="form-group">
       			<label for="branchid">Branch Id:</label>
@@ -126,7 +126,7 @@
     		</div>
         <div class="form-group">
             <label for="amount">Amount:</label>
-            <input type="number" class="form-control" id="amount" maxlength="8" placeholder="Enter Branch ID" name="AMOUNT" required>
+            <input type="number" class="form-control" id="amount" maxlength="8" placeholder="Enter Amount" name="AMOUNT" required>
         </div>
     		<div class="checkbox">
     			<label><input type="checkbox" required> I accept the <a href="conditions.php" target="_blank">Terms and Conditions</a>
@@ -135,7 +135,7 @@
     		<?php
           		$_SESSION['loan_type']=3;
           	?>
-				<button type="submit" class="btn btn-default">Submit</button>
+				<button type="submit" class="btn btn-danger">Submit</button>
   			</form>
 
 			</div>

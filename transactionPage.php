@@ -18,9 +18,9 @@
 		<link rel="stylesheet" href="nexus.css" rel="stylesheet">
 		<style>
 			.jumbotron{
-				background-color:#2e2d88;
-				color:white;
-				margin-right:400px;
+				background-color:#99ccff;
+				color:black;
+				margin-right:300px;
 			}
 			.navbar-inverse.navbar-brand{
 				color:red;
@@ -122,19 +122,20 @@
 				<h4> <?php echo "Hello ".$_SESSION['username']."<br>"; ?></h4>
 			</div>
 			<div class="jumbotron">
+				<div style="text-align:center; color:blue; font-family:'Century';font-size:20px;"> Fund Transfer </div><br><br>
 			<form action="transaction.php" method="post">
 				
 				<div class="form-group">
       				<label for="account_to">Account Number:</label>
-      				<input type="text" class="form-control" id="account_to" placeholder="Enter email" name="ACCOUNT_TO" required/>
+      				<input type="text" class="form-control" id="account_to" placeholder="Account Number" name="ACCOUNT_TO" required/>
     			</div>
     			<div class="form-group">
       				<label for="amount">Amount :</label>
-      				<input type="number" class="form-control" id="amount" placeholder="Enter password" name="AMOUNT" required/>
+      				<input type="number" class="form-control" id="amount" placeholder="Amount" name="AMOUNT" required/>
     			</div>
     			<div class="form-group">
       				<label for="purpose">Purpose :</label>
-      				<input type="text" class="form-control" id="purpose" placeholder="Enter password" name="PURPOSE" required/>
+      				<input type="text" class="form-control" id="purpose" placeholder="Purpose" name="PURPOSE" required/>
     			</div>
 
     			<button type="submit" class="btn btn-danger">Submit</button>

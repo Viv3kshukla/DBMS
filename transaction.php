@@ -123,7 +123,7 @@
 			.jumbotron{
 				background-color:#2e2d88;
 				color:white;
-				margin-right:400px;
+				margin-right:300px;
 			}
 			.navbar-inverse.navbar-brand{
 				color:red;
