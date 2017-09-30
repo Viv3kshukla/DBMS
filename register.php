@@ -56,7 +56,7 @@
 		<h1>Register</h1>
 		<form action="register_status.php" method="post">
       <table class="table table-striped">
-        <tbody>
+        <tbody style="font-size:20px">
           <tr>
             <td><label for="username">Username:</label></td>
             <td><input type="text" class="form-control" id="username" name="USERNAME" required/></td>
