@@ -1,5 +1,5 @@
 <?php
-	if(!empty($_POST['username'])){
+	if(!empty($_POST['USERNAME'])){
 	$username1=$_POST['USERNAME'];
 	$password1=$_POST['PASSWORD'];
 	$password_again=$_POST['PASSWORD_AGAIN'];
@@ -19,7 +19,7 @@
 		}else{
 			echo "error getting error ".mysqli_error($conn);
 		}
-		if($number==1){
+		if($number>0){
 
 			$sql="SELECT * FROM login WHERE USERNAME='$username1'";
 			$result=mysqli_query($conn,$sql);
@@ -45,39 +45,41 @@
 				$mobile_no=$_POST['MOBILE_NO'];
 				$account_type=$_POST['ACCOUNT_TYPE'];
 				$sql2="INSERT INTO login(USERNAME,PASSWORD) VALUES ('$username1','$password1')";
-			//	echo "checkpoint 1<br>";
 				$result2=mysqli_query($conn,$sql2);
-				$sql1="INSERT INTO customer(CUST_NAME,DATE_OF_BIRTH,SEX,EMAIL,MOBILE_NO,STATE,CITY,STREET,PINCODE,LOGIN_ID) VALUES ('$name','$date_of_birth','$sex','$email','$mobile_no','$state','$city','$street','$pincode','$username1')";
-			//	echo "checkpoint 2<br>";
-				$result1=mysqli_query($conn,$sql1);
-				if($result1){
-			//		echo "you are partially registered";
-				}else{
-					echo "error".mysqli_error($conn);
-				}
-				$sql4="SELECT CUST_ID FROM customer,login WHERE LOGIN_ID=USERNAME AND USERNAME='$username1'";
-				$result4=mysqli_query($conn,$sql4);
-				
-				if (mysqli_num_rows($result4)==1) {
-    				$row = mysqli_fetch_assoc($result4);
-        			$cust_id=$row['CUST_ID'];
-    			}
-				else {
-    				echo "There must be some in your data base like ".mysqli_error($conn);
-				}
+				if($result2){
+						$sql1="INSERT INTO customer(CUST_NAME,DATE_OF_BIRTH,SEX,EMAIL,MOBILE_NO,STATE,CITY,STREET,PINCODE,LOGIN_ID) VALUES ('$name','$date_of_birth','$sex','$email','$mobile_no','$state','$city','$street','$pincode','$username1')";
+						$result1=mysqli_query($conn,$sql1);
+						if($result1){
+						}else{
+							echo "error".mysqli_error($conn);
+						}
+						$sql4="SELECT CUST_ID FROM customer,login WHERE LOGIN_ID=USERNAME AND USERNAME='$username1'";
+						$result4=mysqli_query($conn,$sql4);
+						
+						if (mysqli_num_rows($result4)==1) {
+		    				$row = mysqli_fetch_assoc($result4);
+		        			$cust_id=$row['CUST_ID'];
+		    			}
+						else {
+		    				echo "There must be some in your data base like ".mysqli_error($conn);
+						}
 
-			//	echo "checkpoint 3<br>";
-				$start_date=date('Y-m-d');
-				$balance=0;
-				$sql3="INSERT INTO account(START_DATE,BALANCE,BRANCH_ID,CUST_ID,ACCOUNT_TYPE) VALUES ('$start_date','$balance','$branch_id','$cust_id','$account_type')";
-				$result3=mysqli_query($conn,$sql3);
-			//	echo "checkpoint 4<br>";
-				if($result3){
-				
+						$start_date=date('Y-m-d');
+						$balance=0;
+						$sql3="INSERT INTO account(START_DATE,BALANCE,BRANCH_ID,CUST_ID,ACCOUNT_TYPE) VALUES ('$start_date','$balance','$branch_id','$cust_id','$account_type')";
+						$result3=mysqli_query($conn,$sql3);
+
+						if($result3){
+						
+						}
+						else{
+							echo "error ".mysqli_error($conn);
+						}
 				}
 				else{
-					echo "error ".mysqli_error($conn);
+					echo "Connection Error ".mysqli_error($conn);
 				}
+				
 			//	echo "checkpoint 5<br>";
 			}
 		}
