@@ -20,7 +20,7 @@
 			.jumbotron{
 				background-color:#99ccff;
 				color:white;
-				margin-right:300px;
+				margin-right:200px;
 			}
 			.navbar-inverse.navbar-brand{
 				color:red;
@@ -86,7 +86,7 @@
      </div>
 
 
-  <div class="col-md-9" style="margin-top: 3cm;padding-left:1cm;">
+  <div class="col-md-9" style="margin-top: 2cm;padding-left:1cm;">
 		<div class="container">
 			<div class="page-header">
 				<h4> <?php echo "Hello ".$_SESSION['username']."<br>"; ?></h4>
@@ -137,7 +137,7 @@
 			<br>
 			<div class="jumbotron" style="background-color:#99ccff;
 				color:black;
-				margin-right:300px;">
+				margin-right:200px;">
 				<div style="text-align:center; color:blue; font-family:'Century';font-size:20px;"> Last 10 transactions </div><br><br>
 					<table class="table table-striped table-bordered">
     						<thead style="color:black">

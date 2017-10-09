@@ -20,7 +20,7 @@
 			.jumbotron{
 				background-color:#99ccff;
 				color:black;
-				margin-right:200px;
+				margin-right:50px;
 			}
 		</style>
 	</head>
@@ -110,7 +110,7 @@
 
 
 
- <div class="col-md-9" style="margin-top: 3cm;padding-left:1cm;">
+ <div class="col-md-9" style="margin-top: 2cm;padding-left:1cm;">
 
 
 
